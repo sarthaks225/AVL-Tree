@@ -61,7 +61,7 @@ if(stackStart!=NULL) return 0;
 else return 1;
 }
 
-void balanceTree()
+void balanceTree()             // balace tree
 {
 
 struct node *parent,*rc,*rclc,*lc,*lcrc,*root;
@@ -136,9 +136,6 @@ lc->right=root;
 
 
 }
-
-
-
 
 
 
@@ -242,7 +239,7 @@ free(t);
 return p;
 }
 
-void levelOrderTraversal()
+void levelOrderTraversal()           //levelOrderTraversl
 {
 struct node *t;
 int insertionCount,levelNumber=1;
@@ -319,7 +316,6 @@ free(t);
 }
 
 
-
 }
 else
 {
@@ -393,16 +389,8 @@ free(t);
 k=1;
 }
 
-while(0)
+while(queueStart!=NULL)     //push to stack from queue
 {
-j=pop();
-printf("j->num=(%d)\n",j->num);
-}
-
-
-while(queueStart!=NULL)     
-{
-
 j=removeFromQueue(); 
 push(j);
 }
@@ -412,8 +400,6 @@ balanceTree();
 
 return 1;
 }
-
-
 
 void findHeight(int num)
 {
@@ -438,8 +424,8 @@ if(p==NULL) return;
 inorderTraversalUsingRecursion(p->left);
 printf("%d\n",p->num);
 inorderTraversalUsingRecursion(p->right);
-
 }
+
 
 int main()
 {
@@ -499,11 +485,7 @@ findHeight(num);
 
 }
 
-
-
 }
-
-
 
 return 0;
 }
